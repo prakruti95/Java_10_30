@@ -1,0 +1,78 @@
+Java -> Programming Language
+
+
+-> Desktop software[Core Java]
+-> Websites[Advance Java,Framework]
+
+============================================
+
+-> performance better
+-> speed
+-> Smoothly
+-> load,stress,performance
+
+==============================================
+Setup:
+
+JDK => Java Development Kit
+Java8,Java11,17,21,23
+
+step 1: Download JDK
+https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html
+
+step 2: Install JDK
+
+step 3: Set the Path
+C:\Program Files\Java\jdk-17\bin
+
+step 4: Open CMD and type
+-> java --version
+-> javac
+
+step 5:Editor
+
+Notepad
+Notepad++
+Vscode
+Eclipse
+Netbeans
+
+step 6:
+Eclipse
+https://www.eclipse.org/downloads/packages/release/kepler/sr2/eclipse-ide-java-ee-developers
+
+-> unzip the file
+-> install -> java ee  ide for developers
+
+-> Workspace
+
+
+JDK -> java development kit -> compiler
+JRE -> java runtime environment -> system library
+JVM -> java virtual machine -> run your jdk
+
+data type:
+integer
+float
+character
+double
+boolean
+
+String
+
+========================================
+Open -> Help -> Eclipse Marketplace -> WindowBuilder -> Install
+-> restart your eclipse
+
+
+Open -> Help -> Eclipse Marketplace -> fx -> Install
+-> restart your eclipse
+
+
+
+
+
+
+
+
+
