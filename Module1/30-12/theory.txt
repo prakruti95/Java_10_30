@@ -1,0 +1,13 @@
+Encapsulation:
+setter-getter
+
+Inheritance:
+
+Multiple inheritance is not supported in java
+
+interafce : collection of abstract methods
+abstract method : method which does not have a body part
+
+Hybrid Inheritance:
+
+
