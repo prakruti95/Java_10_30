@@ -1,0 +1,41 @@
+static - fixed the value
+
+variable-fix-
+method
+block
+
+Polymorphism:
+
+Types of poly
+1)Method Overloading:
+when two or more method having a same name but number of parameters are
+diffrent
+
+2)Method Overriding:
+when two or more method having a same name and number of parameters are
+also same
+
+
+object,class,abstraction,encapsulation,inheritance,polymorphism
+this,static,super,final
+plugin - windowbuilder,fx
+
+How to add external jar files:
+
+src -> right click -> build path -> configure build path->libraries->
+add external jar -> click on jar -> save
+
+javac
+java
+
+String
+StringBuilder
+StringBuffer
+Array
+
+
+
+
+
+
+
