@@ -1,0 +1,26 @@
+1. literal
+String a = "tops tech";
+
+2. object
+String a1 = new String("tops tech");
+
+3. character array
+char ch[]={'t','o','p','s'};
+String a1 = new String(ch);
+
+
+
+String -> immutable [can not change]
+
+
+StringBuilder->mutable[can change]
+StringBuffer->mutable[can change]
+
+Array : Collection of elements that is called an array
+
+1-D
+2-D
+
+
+
+
