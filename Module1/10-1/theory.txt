@@ -1,0 +1,17 @@
+Thread:When you want to manage any process
+you have to use thread
+
+Threads:
+1) Single Thread
+2) Multi Thread
+
+Use:
+class -> extends -> Thread
+interface -> implements -> Runnable
+
+Lifecycle:
+init
+start
+run
+stop
+destroy
