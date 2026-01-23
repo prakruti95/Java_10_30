@@ -1,0 +1,17 @@
+Task : 
+
+1st page -> pass show/hide using checkbox
+
+2nd page -> perfect total
+2nd page -> before 2nd page there should be one input dialog
+if i will enter table no: 12
+then in 2nd screen it should be show table no:12
+
+after placing order details should be save in text file
+details should be append
+ 
+
+
+
+
+
