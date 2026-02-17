@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 Tags</title>
+</head>
+<body>
+	<!-- Iframe is use for adding any map or another HTML file in it -->
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58748.24296022703!2d72.52685788531262!3d23.032392394042567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84faa5a36071%3A0x9af325a448f09478!2sTOPS+Technologies+Android+PHP+Digital+Marketing+Training!5e0!3m2!1sen!2sin!4v1535631668606" width="300" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+	
+	<!-- Navigation is use for adding menu in webpage -->
+	<nav>
+		<a href="#">Home</a> |
+		<a href="#">About</a> |
+		<a href="http://www.google.com" target="_blank">Login</a>
+	</nav>
+	
+	<!-- Video is use for adding any video in file -->
+	<video controls="" height="300px" width="300px">
+		<source src="sample.mp4" type="video/mp4">
+	</video>
+	
+	<!-- HTML5 New Elements in form tags -->
+	<form method="get" id="frm">
+		Color:<input type="Color" name=""><br>
+		date:<input type="date" name=""><br>
+		Time<input type="datetime-local" name=""><br>
+		week:<input type="week" name=""><br>
+		Number:<input type="number" name="" min="0" max="10"><br>
+		Range<input type="range" name=""><br>
+		Url:<input type="url" name=""><br>
+		Email:<input type="email" name=""><br>
+		Name:<input type="text" name="" required="" pattern="[a-zA-z]{3,5}" title="plz enter only 3 to 5 character"><br>
+		File:<input type="file" name="" multiple="" accept="image/*"><br>
+		<input type="submit" name="">
+	</form>
+	<input type="text" name="txt" form="frm">
+</body>
+</html>
