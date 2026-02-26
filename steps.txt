@@ -1,0 +1,28 @@
+Servlet Crud:
+
+1. Template Integration 
+copy-paste all the files inside webapp folder
+
+2. Add Jar Files
+Build path
+Web-INF-> lib
+
+3.
+add action in html file example form
+add method
+<form action="save" method="post">
+
+4.Create a Servlet File [Java]
+get detail from HTML
+String name = req.getparameter("name");
+
+5.Create a Model class and set and get detail
+
+6.Set detail from servlet file to model
+
+7.Create a Dao File [connect,crud operation]
+
+8.call dao inside servlet take a response and according to response
+redirect screen
+ 
+
