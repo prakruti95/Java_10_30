@@ -7,7 +7,7 @@
  <jsp:useBean id="m" class="com.model.SignupModel"/>
  <jsp:setProperty property="*" name="m"/>
 
-<%
+<%-- <%
 	int status = Dao.signup(m);
 	
 		if(status>0)
@@ -19,10 +19,10 @@
 			RequestDispatcher rd = request.getRequestDispatcher("signup.jsp");
 			rd.include(request,response);
 		}
-%>
+%> --%>
 
    
-  <%--   <%
+   <%
 	
     //get
      String fname=request.getParameter("fullname");  
@@ -61,7 +61,7 @@
 		try
     	{  
     		Class.forName("com.mysql.jdbc.Driver");
-    		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/webwing2","root","");  
+    		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");  
     		PreparedStatement ps=con.prepareStatement("select * from signup where email=?");  
     		ps.setString(1, email);
     		ResultSet rs=ps.executeQuery();  
@@ -97,12 +97,12 @@
 		System.out.print(number11+" "+number22+" "+number33+" "+number44);
      	
 		RequestDispatcher rd = request.getRequestDispatcher("EmailSendingServlet2");
-		 request.setAttribute("e1", email);
+		request.setAttribute("e1", email);
 		session.setAttribute("n1",number11);
 		session.setAttribute("n2",number22);
 		session.setAttribute("n3",number33);
 		session.setAttribute("n4",number44);
-	    rd.forward(request, response);
+	      rd.forward(request, response);
       		
       		}
     	}
@@ -112,7 +112,7 @@
       		}
      %> 
       
- --%>
+
 	
 
 	
