@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
+import com.model.ContactModel;
+import com.model.ProductModel;
 import com.model.SignupModel;
 
 
@@ -99,6 +101,79 @@ public class Dao
 		}
 		
 		return m2;
+	}
+	
+	public static List<ProductModel> viewproducts()
+	{
+		
+		List<ProductModel> plist = new ArrayList<>();
+		
+		Connection con = Dao.getconnect();
+		
+		try 
+		{
+			PreparedStatement ps = con.prepareStatement("select * from products");
+			ResultSet set = ps.executeQuery();
+		
+			while(set.next())
+			{
+				
+				int id = set.getInt(1);
+				String pname = set.getString(2);
+				String pprice = set.getString(3);
+				String pdes = set.getString(4);
+				//String pimage = set.getString(5);
+				 
+				byte[] imgData = set.getBytes(5);
+				String encode = Base64.getEncoder().encodeToString(imgData);
+				
+				ProductModel pm = new ProductModel();
+				pm.setId(id);
+				pm.setP_name(pname);
+				pm.setP_price(pprice);
+				pm.setP_des(pdes);
+				pm.setP_image(encode);	
+				
+				plist.add(pm);
+				
+			}
+		} 
+		catch (Exception e)
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return plist;
+		
+	}
+	
+	public static int contactinsert(ContactModel m)
+	{
+		Connection con = Dao.getconnect();
+		int status = 0;
+		
+		try 
+		{
+			PreparedStatement ps = con.prepareStatement("insert into contact(fullname,email,phone,feedback) values (?,?,?,?)");
+	
+			ps.setString(1,m.getFullname());
+			ps.setString(2,m.getEmail());
+			ps.setString(3,m.getPhone());
+			ps.setString(4,m.getFeedback());
+			
+			status = ps.executeUpdate();
+		} 
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			e.printStackTrace();
+		}
+		
+		return status;
 	}
 	
 	

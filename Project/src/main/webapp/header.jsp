@@ -172,14 +172,14 @@
                               <li class="nav-item">
                                  <a class="nav-link" href="cart.jsp">Cart</a>
                               </li>
-                              
+                              <li class="nav-item">
+                                 <a class="nav-link" href="contact.jsp"> contact</a>
+                              </li> 
                              <%
                               	}
                               %> 
                               
-                              <li class="nav-item">
-                                 <a class="nav-link" href="contact.jsp"> contact</a>
-                              </li>
+                             
                            </ul>
                         </div>
                      </nav>
