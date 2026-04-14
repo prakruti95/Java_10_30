@@ -2,9 +2,8 @@ package com.model;
 
 public class CartModel 
 {
-	int id;
-	String p_name,p_price,p_des,p_image,email;
-	
+	private int id;
+	private  String p_name,p_price,p_des,p_image,fp,p_qua,email;
 	public int getId() {
 		return id;
 	}
@@ -35,12 +34,25 @@ public class CartModel
 	public void setP_image(String p_image) {
 		this.p_image = p_image;
 	}
+	public String getFp() {
+		return fp;
+	}
+	public void setFp(String fp) {
+		this.fp = fp;
+	}
+	public String getP_qua() {
+		return p_qua;
+	}
+	public void setP_qua(String p_qua) {
+		this.p_qua = p_qua;
+	}
 	public String getEmail() {
 		return email;
 	}
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	
 	
 }

@@ -39,6 +39,8 @@
 			}
         
     </style>
+  
+    
 </head>
 <body>
 
@@ -50,7 +52,8 @@
         // For demonstration purposes, let's assume you have a list of Product objects
         
         List<CartModel> list = Dao.getcartbyemail(session.getAttribute("email").toString());// Method to retrieve product data from the database
-        
+        int mydata = Dao.totalcheckout(session.getAttribute("email").toString());
+       
         // Iterate over the product list and generate HTML for each product
          for (CartModel m : list) 
         {
@@ -58,20 +61,26 @@
         <div class="product">
             <img src="data:image/jpeg;base64,<%=m.getP_image()%>" width="150px" height="200px" />
             <h3><%= m.getP_name() %></h3>
-            <p>Price: <%= m.getP_price() %></p>
+            <p>Price: <%= m.getFp() %></p>
+          
             
-           
-                 
-         <form action="payment.jsp">
+            
+          
+         
+         	
+        
+          <form action="payment.jsp">
           		<input type="hidden" name="id" value="<%=m.getId()%>">
             	<input type="submit" class="swd-button" value="Proceed to Payment">
          </form>
-      
+       
         
           
        
         </div>
         <% } %>
+        
+        <h3>Total Checkout: <%= mydata%></h3>
       
 		
     </div>
