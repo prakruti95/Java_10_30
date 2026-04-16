@@ -1,0 +1,277 @@
+# 📁 Project Structure
+
+```
+ImageApp/
+│
+├── src/
+│   ├── com.example.servlet/
+│   │       ImageDownloadServlet.java
+│   │       ImageListServlet.java
+│   │       DBConnection.java
+│
+├── WebContent/
+│   ├── images/              (saved images here)
+│   ├── index.jsp
+│   ├── display.jsp
+│
+├── web.xml
+```
+
+---
+
+# 🗄️ 1. Database (MySQL)
+
+```sql
+CREATE DATABASE image_db;
+
+USE image_db;
+
+CREATE TABLE images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    path VARCHAR(255)
+);
+```
+
+---
+
+# 🔌 2. DBConnection.java
+
+```java id="dbcon01"
+package com.example.servlet;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class DBConnection {
+
+    public static Connection getConnection() {
+        Connection con = null;
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/image_db",
+                "root",
+                "password"
+            );
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return con;
+    }
+}
+```
+
+---
+
+# 🌐 3. ImageDownloadServlet.java
+
+```java id="imgdl01"
+package com.example.servlet;
+
+import java.io.*;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class ImageDownloadServlet extends HttpServlet {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String imageUrl = request.getParameter("url");
+        String fileName = "img_" + System.currentTimeMillis() + ".jpg";
+
+        String savePath = getServletContext().getRealPath("/images") 
+                        + File.separator + fileName;
+
+        try {
+            // Download image
+            URL url = new URL(imageUrl);
+            InputStream in = url.openStream();
+            FileOutputStream out = new FileOutputStream(savePath);
+
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+
+            while ((bytesRead = in.read(buffer)) != -1) {
+                out.write(buffer, 0, bytesRead);
+            }
+
+            in.close();
+            out.close();
+
+            // Save path in DB
+            Connection con = DBConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement(
+                "INSERT INTO images (name, path) VALUES (?, ?)"
+            );
+
+            ps.setString(1, fileName);
+            ps.setString(2, "images/" + fileName);
+
+            ps.executeUpdate();
+
+            response.sendRedirect("list");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            response.getWriter().println("Error downloading image");
+        }
+    }
+}
+```
+
+---
+
+# 📋 4. ImageListServlet.java
+
+```java id="imglist01"
+package com.example.servlet;
+
+import java.io.IOException;
+import java.sql.*;
+import java.util.*;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class ImageListServlet extends HttpServlet {
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        List<String> images = new ArrayList<>();
+
+        try {
+            Connection con = DBConnection.getConnection();
+            Statement st = con.createStatement();
+
+            ResultSet rs = st.executeQuery("SELECT * FROM images");
+
+            while (rs.next()) {
+                images.add(rs.getString("path"));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        request.setAttribute("images", images);
+        RequestDispatcher rd = request.getRequestDispatcher("display.jsp");
+        rd.forward(request, response);
+    }
+}
+```
+
+---
+
+# 🧾 5. index.jsp (Input Page)
+
+```jsp id="indexjsp01"
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download Image</title>
+</head>
+<body>
+
+<h2>Download Image from URL</h2>
+
+<form action="download" method="post">
+    Enter Image URL:
+    <input type="text" name="url" size="50" required>
+    <br><br>
+    <input type="submit" value="Download">
+</form>
+
+<br>
+<a href="list">View Images</a>
+
+</body>
+</html>
+```
+
+---
+
+# 🖼️ 6. display.jsp
+
+```jsp id="displayjsp01"
+<%@ page import="java.util.*" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Images</title>
+</head>
+<body>
+
+<h2>Downloaded Images</h2>
+
+<%
+    List<String> images = (List<String>) request.getAttribute("images");
+
+    if (images != null) {
+        for (String img : images) {
+%>
+            <img src="<%= img %>" width="200" height="200"/>
+            <br><br>
+<%
+        }
+    }
+%>
+
+<a href="index.jsp">Back</a>
+
+</body>
+</html>
+```
+
+---
+
+# ⚙️ 7. web.xml
+
+```xml id="webxml01"
+<web-app>
+
+    <servlet>
+        <servlet-name>download</servlet-name>
+        <servlet-class>com.example.servlet.ImageDownloadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>download</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>list</servlet-name>
+        <servlet-class>com.example.servlet.ImageListServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>list</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+```
+
+---
+
+# 🚀 How to Run
+
+1. Import project into Eclipse
+2. Add MySQL connector `.jar`
+3. Update DB username/password
+4. Create `images` folder inside WebContent
+5. Run on Tomcat server
+6. Open:
+
+```
+http://localhost:8080/ImageApp/index.jsp
+```
+
