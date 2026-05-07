@@ -1,5 +1,7 @@
 package com.bo;
 
+import java.util.List;
+
 import org.springframework.transaction.annotation.Transactional;
 
 import com.dao.DAO;
@@ -22,5 +24,24 @@ public class BO
 	{
 		dao.Insert(p);
 	}
+	public void Update(Person p)
+	{
+		dao.Update(p);
+	}
+	public void Delete(Person p)
+	{
+		dao.Delete(p);
+	}
 	
+	public Person getOne(Person p)
+	{
+		Person p1 = this.dao.getSingle(p);
+		return p1;
+	}
+	public List<Person> ViewRecords()
+	{
+		List<Person> getlist = this.dao.getall();
+		return getlist;
+	}
+
 }

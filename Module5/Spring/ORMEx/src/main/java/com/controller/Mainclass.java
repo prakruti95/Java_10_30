@@ -17,10 +17,40 @@ public static void main(String[] args)
 	Scanner sc = new Scanner(System.in);
 	BO bo = (BO) con.getBean("bo");
 	Person p  =  (Person) con.getBean("model");
-	System.out.println("Enter name:");
-	p.setName(sc.next());
-	bo.Insert(p);
 	
+	
+	//INSERT
+	
+//	System.out.println("Enter name:");
+//	p.setName(sc.next());
+//	bo.Insert(p);
+	
+	
+	//UPDATE
+//	System.out.println("Enter id:");
+//	p.setId(sc.nextInt());
+//	System.out.println("Enter name:");
+//	p.setName(sc.next());
+//	bo.Update(p);
+	
+	//DELETE
+	System.out.println("Enter id:");
+	p.setId(sc.nextInt());
+	bo.Delete(p);
+	
+	//VIEW
+//	List<Person> getall = bo.ViewRecords();
+//	System.out.println("ID\t|\tName");
+//	for (Person person : getall) 
+//	{
+//		System.out.println(person.getId()+"\t|\t"+person.getName());
+//	}
+	//SINGLE
+//	 System.out.println("Enter id:");
+//	 p.setId(sc.nextInt());
+//	 p = bo.getOne(p);
+//	 System.out.println(p.getName());
+//	
 	
 	
 }
