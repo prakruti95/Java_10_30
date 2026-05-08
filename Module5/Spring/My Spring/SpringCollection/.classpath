@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/spring-asm-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/spring-beans-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/spring-context-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/spring-context-support-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/spring-core-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Tops/Documents/Eclipse Rajkot/Eclipse Rajkot/External Jars/Spring Jar/spring-expression-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/commons-dbcp-1.4.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/spring-asm-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/spring-beans-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/spring-context-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/spring-context-support-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/spring-core-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring Jar/spring-expression-3.2.0.M1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/aopalliance-1.0.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/aspectj-1.6.9.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/aspectj-weaver.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/cglib2.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/cglib-nodep-2.1.3.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/commons-pool-1.5.4.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/hibernate-commons-annotations-4.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/hibernate-core-4.1.4.Final.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/javassist-3.15.0-GA.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/jboss-transaction-api_1.1_spec-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/jstl-standard.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/log4j.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/mysql-connector-java-5.1.6.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/servlet-api.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-aop-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-aspects-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-beans-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-build-src-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-context-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-context-support-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-core-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-expression-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-framework-bom-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-instrument-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-jdbc-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-jms-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-messaging-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-orm-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-oxm-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-test-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-tx-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-web-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-webmvc-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-webmvc-portlet-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="lib" path="H:/JSess/External Jars/Spring MVC Jar/spring-websocket-4.0.2.RELEASE.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
