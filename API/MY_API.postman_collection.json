@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "3fc8b53b-0458-436d-a85a-a4a533a75e0c",
+    "name": "MY_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54898464",
+    "_collection_link": "https://go.postman.co/collection/54898464-3fc8b53b-0458-436d-a85a-a4a533a75e0c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "USER",
+      "item": [
+        {
+          "name": "User Registration",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"fname\":\"shweta\",\r\n    \"lname\":\"duari\",\r\n    \"email\":\"shweta@gmail.com\",\r\n    \"phno\":\"9988776655\",\r\n    \"pass\":\"123456\",\r\n    \"gender\":\"female\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://restapilive.onrender.com/userreg",
+              "protocol": "https",
+              "host": [
+                "restapilive",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "userreg"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "User Login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"shweta@gmail.com\",\r\n    \"pass\":\"1234567\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://restapilive.onrender.com/userlogin",
+              "protocol": "https",
+              "host": [
+                "restapilive",
+                "onrender",
+                "com"
+              ],
+              "path": [
+                "userlogin"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ADMIN",
+      "item": [
+        {
+          "name": "Admin Login",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Product Add",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Product View",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
