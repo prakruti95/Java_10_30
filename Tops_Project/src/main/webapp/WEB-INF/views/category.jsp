@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Brand Management</title>
+<title>Category Management</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,13 +18,9 @@ body{
     background-color:#f5f7fa;
 }
 
-/* NAVBAR */
-
 .navbar{
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
-
-/* CARD */
 
 .card-box{
     border:none;
@@ -32,14 +28,10 @@ body{
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* TITLE */
-
 .page-title{
     font-weight:bold;
     color:#0d6efd;
 }
-
-/* FORM */
 
 .form-label{
     font-weight:600;
@@ -56,8 +48,6 @@ body{
     font-size:17px;
     font-weight:600;
 }
-
-/* FOOTER */
 
 .footer{
     background:#0d6efd;
@@ -142,26 +132,26 @@ body{
 
                     <h2 class="page-title text-center mb-4">
 
-                        <i class="fa-solid fa-tag"></i>
+                        <i class="fa-solid fa-layer-group"></i>
 
-                        Add Brand
+                        Add Category
 
                     </h2>
 
-                    <form action="/saveBrand" method="post">
+                    <form action="/saveCategory" method="post">
 
                         <div class="mb-4">
 
                             <label class="form-label">
 
-                                Brand Name
+                                Category Name
 
                             </label>
 
                             <input type="text"
-                                   name="brandName"
+                                   name="categoryName"
                                    class="form-control"
-                                   placeholder="Enter Brand Name"
+                                   placeholder="Enter Category Name"
                                    required>
 
                         </div>
@@ -171,7 +161,7 @@ body{
 
                             <i class="fa-solid fa-floppy-disk"></i>
 
-                            Save Brand
+                            Save Category
 
                         </button>
 
@@ -186,7 +176,6 @@ body{
     </div>
 
 </div>
-
 
 
 </body>
