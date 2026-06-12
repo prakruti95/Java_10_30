@@ -6,8 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
-<title>All Bills - Poojara Mobile Shop</title>
+
+<title>Billing Records</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,25 +19,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <style>
 
 body{
-    background-color:#f5f7fa;
-    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
 }
-
-/* NAVBAR */
 
 .navbar{
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
-
-/* CARD */
 
 .card-box{
     border:none;
     border-radius:15px;
     box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
-
-/* TABLE */
 
 .table{
     vertical-align:middle;
@@ -51,17 +46,17 @@ body{
     color:#0d6efd;
 }
 
-.badge-payment{
-    font-size:14px;
-    padding:8px 12px;
-}
-
 .footer{
     background:#0d6efd;
     color:white;
     text-align:center;
     padding:15px;
     margin-top:40px;
+}
+
+.action-btn{
+    margin-bottom:5px;
+    width:100%;
 }
 
 </style>
@@ -84,22 +79,10 @@ body{
         <div>
 
             <a href="/" class="btn btn-light me-2">
-                <i class="fa-solid fa-house"></i>
                 Dashboard
             </a>
 
-            <a href="/add" class="btn btn-success me-2">
-                <i class="fa-solid fa-plus"></i>
-                Add Mobile
-            </a>
-
-            <a href="/bills" class="btn btn-warning me-2">
-                <i class="fa-solid fa-file-invoice"></i>
-                Bills
-            </a>
-
             <a href="/logout" class="btn btn-danger">
-                <i class="fa-solid fa-right-from-bracket"></i>
                 Logout
             </a>
 
@@ -109,14 +92,11 @@ body{
 
 </nav>
 
-<!-- MAIN CONTENT -->
-
 <div class="container mt-5">
 
-    <div class="d-flex justify-content-between align-items-center mb-4">
+    <div class="d-flex justify-content-between mb-4">
 
         <h2 class="page-title">
-            <i class="fa-solid fa-file-invoice-dollar"></i>
             Billing Records
         </h2>
 
@@ -139,26 +119,16 @@ body{
                         <tr>
 
                             <th>ID</th>
-
-                            <th>Customer Name</th>
-
-                            <th>Mobile Number</th>
-
+                            <th>Customer</th>
+                            <th>Mobile</th>
                             <th>Product</th>
-
                             <th>Qty</th>
-
                             <th>Price</th>
-
                             <th>Total</th>
-
                             <th>Payment</th>
-
-                            <th>Transaction ID</th>
-
+                            <th>Transaction</th>
                             <th>Screenshot</th>
-
-                            <th width="140">Action</th>
+                            <th width="220">Actions</th>
 
                         </tr>
 
@@ -178,11 +148,7 @@ body{
 
                                 <td>${b.productName}</td>
 
-                                <td>
-                                    <span class="badge bg-secondary">
-                                        ${b.quantity}
-                                    </span>
-                                </td>
+                                <td>${b.quantity}</td>
 
                                 <td>₹ ${b.price}</td>
 
@@ -195,15 +161,19 @@ body{
                                 <td>
 
                                     <c:if test="${b.paymentType == 'Cash'}">
-                                        <span class="badge bg-success badge-payment">
+
+                                        <span class="badge bg-success">
                                             Cash
                                         </span>
+
                                     </c:if>
 
                                     <c:if test="${b.paymentType == 'Online'}">
-                                        <span class="badge bg-primary badge-payment">
+
+                                        <span class="badge bg-primary">
                                             Online
                                         </span>
+
                                     </c:if>
 
                                 </td>
@@ -226,9 +196,8 @@ body{
 
                                         <a href="/uploads/${b.screenshot}"
                                            target="_blank"
-                                           class="btn btn-sm btn-info text-white">
+                                           class="btn btn-info btn-sm">
 
-                                            <i class="fa-solid fa-image"></i>
                                             View
 
                                         </a>
@@ -244,30 +213,23 @@ body{
                                 <td>
 
                                     <a href="/printBill/${b.id}"
-                                       class="btn btn-danger btn-sm">
+                                       class="btn btn-danger btn-sm action-btn">
 
-                                        <i class="fa-solid fa-print"></i>
-                                        Print
+                                        <i class="fa-solid fa-file-pdf"></i>
+                                        Print PDF
+
+                                    </a>
+
+                                    <a href="https://wa.me/91${b.customerMobile}?text=Hello ${b.customerName}, Your bill for ${b.productName} Amount ₹${b.totalAmount}"
+                                       target="_blank"
+                                       class="btn btn-success btn-sm action-btn">
+
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                        Share WhatsApp
 
                                     </a>
 
                                 </td>
-           <td>
-
-    <a href="/printbill/${b.id}"
-       class="btn btn-primary btn-sm">
-        Print PDF
-    </a>
-
-    <a href="https://wa.me/91${b.customerMobile}?text=Hello%20${b.customerName},%20Your%20bill%20for%20${b.productName}%20Amount:%20₹${b.totalAmount}"
-       target="_blank"
-       class="btn btn-success btn-sm">
-
-        Share WhatsApp
-
-    </a>
-
-</td>
 
                             </tr>
 
@@ -285,10 +247,8 @@ body{
 
 </div>
 
-<!-- FOOTER -->
-
 <div class="footer">
-    © 2026 Poojara Mobile Shop | Mobile Inventory Management System
+    © 2026 Poojara Mobile Shop | Mobile Inventory System
 </div>
 
 </body>
